@@ -1,0 +1,5 @@
+cd ~/Projects/terence-portfolio
+git add .
+git commit -m "Publish portfolio site"
+git remote add origin https://github.com/YOUR_USERNAME/terence-portfolio.git
+git push -u origin main
