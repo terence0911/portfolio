@@ -202,36 +202,57 @@ a:hover {
   min-width: 100%;
   min-height: 100%;
   object-fit: cover;
-  object-position: center 40%;
+  object-position: center 35%;
+  filter: brightness(0.55) saturate(0.8);
 }
 
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    160deg,
-    rgba(77, 71, 46, 0.82) 0%,
-    rgba(145, 113, 60, 0.72) 55%,
-    rgba(77, 71, 46, 0.88) 100%
-  );
+  background:
+    radial-gradient(
+      ellipse 85% 75% at 50% 42%,
+      rgba(36, 32, 22, 0.55) 0%,
+      rgba(36, 32, 22, 0.88) 72%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(77, 71, 46, 0.72) 0%,
+      rgba(77, 71, 46, 0.9) 100%
+    );
   z-index: 0;
 }
 
 .hero-inner {
   position: relative;
   z-index: 1;
-  max-width: 42rem;
+  max-width: 44rem;
   text-align: center;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  background: rgba(36, 32, 22, 0.52);
+  border: 1px solid rgba(248, 245, 239, 0.14);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.18);
 }
 
 .hero-eyebrow {
-  margin: 0 0 var(--space-md);
+  margin: 0 0 var(--space-xs);
   font-size: 0.8125rem;
   font-weight: 600;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  opacity: 0.75;
+  color: var(--gold);
+}
+
+.hero-headline {
+  margin: 0 0 var(--space-md);
+  font-size: clamp(0.9rem, 2.2vw, 1.05rem);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: rgba(248, 245, 239, 0.88);
 }
 
 .hero-title {
@@ -239,6 +260,7 @@ a:hover {
   font-family: var(--font-display);
   font-weight: 300;
   line-height: 0.95;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.35);
 }
 
 .hero-name {
@@ -252,7 +274,8 @@ a:hover {
   max-width: 32rem;
   font-size: clamp(1.05rem, 2.5vw, 1.2rem);
   line-height: 1.6;
-  opacity: 0.9;
+  color: rgba(248, 245, 239, 0.95);
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
 }
 
 .hero-actions {
@@ -270,7 +293,7 @@ a:hover {
   height: min(50vw, 28rem);
   border-radius: 50%;
   background: var(--gold);
-  opacity: 0.12;
+  opacity: 0.08;
   z-index: 0;
 }
 
