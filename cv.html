@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Terence Liu — CV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "DM Sans", Arial, sans-serif;
+      font-size: 8.5pt;
+      line-height: 1.35;
+      color: #4d472e;
+      background: #fff;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      padding: 10mm 11mm 9mm;
+      display: grid;
+      grid-template-columns: 62mm 1fr;
+      gap: 7mm;
+    }
+
+    .sidebar {
+      background: #f8f5ef;
+      border-radius: 4px;
+      padding: 7mm 5.5mm;
+      display: flex;
+      flex-direction: column;
+      gap: 5mm;
+    }
+
+    .name {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 24pt;
+      font-weight: 600;
+      line-height: 1;
+      color: #4d472e;
+      letter-spacing: 0.02em;
+    }
+
+    .block h2 {
+      font-size: 7pt;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #91713c;
+      margin-bottom: 2mm;
+      padding-bottom: 1mm;
+      border-bottom: 1px solid rgba(145, 113, 60, 0.25);
+    }
+
+    .block p,
+    .block li {
+      font-size: 8pt;
+      line-height: 1.4;
+    }
+
+    .block ul {
+      list-style: none;
+    }
+
+    .block li + li {
+      margin-top: 1.5mm;
+    }
+
+    .contact-item {
+      margin-bottom: 1.5mm;
+    }
+
+    .contact-label {
+      display: block;
+      font-size: 6.5pt;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #91713c;
+    }
+
+    .contact-item a {
+      color: #4d472e;
+      text-decoration: none;
+      word-break: break-all;
+    }
+
+    .lang-name {
+      font-weight: 600;
+    }
+
+    .lang-level {
+      color: rgba(77, 71, 46, 0.75);
+      font-size: 7.5pt;
+    }
+
+    .skill-group {
+      margin-bottom: 2mm;
+    }
+
+    .skill-group strong {
+      display: block;
+      font-size: 7pt;
+      font-weight: 600;
+      color: #91713c;
+      margin-bottom: 0.5mm;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1mm;
+    }
+
+    .tag {
+      font-size: 7pt;
+      padding: 0.6mm 1.8mm;
+      background: #fff;
+      border: 1px solid rgba(77, 71, 46, 0.12);
+      border-radius: 999px;
+    }
+
+    .main {
+      display: flex;
+      flex-direction: column;
+      gap: 4.5mm;
+    }
+
+    .summary {
+      font-size: 8.5pt;
+      line-height: 1.45;
+      color: rgba(77, 71, 46, 0.92);
+    }
+
+    .section h2 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 13pt;
+      font-weight: 600;
+      color: #91713c;
+      margin-bottom: 2.5mm;
+      padding-bottom: 1mm;
+      border-bottom: 1.5px solid #efcd3d;
+    }
+
+    .entry {
+      margin-bottom: 3mm;
+    }
+
+    .entry:last-child {
+      margin-bottom: 0;
+    }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 3mm;
+      margin-bottom: 0.5mm;
+    }
+
+    .entry-title {
+      font-weight: 600;
+      font-size: 9pt;
+    }
+
+    .entry-date {
+      font-size: 7.5pt;
+      font-weight: 500;
+      color: #91713c;
+      white-space: nowrap;
+    }
+
+    .entry-org {
+      font-size: 8pt;
+      font-weight: 500;
+      color: rgba(77, 71, 46, 0.8);
+      margin-bottom: 1mm;
+    }
+
+    .entry ul {
+      margin-left: 3.5mm;
+      padding-left: 2mm;
+    }
+
+    .entry li {
+      font-size: 8pt;
+      line-height: 1.38;
+      margin-bottom: 0.6mm;
+    }
+
+    .project-link {
+      color: #91713c;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .edu-honour {
+      font-size: 7.5pt;
+      font-style: italic;
+      color: rgba(77, 71, 46, 0.8);
+      margin-top: 0.5mm;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <h1 class="name">Terence Liu</h1>
+
+      <section class="block">
+        <h2>Contact</h2>
+        <div class="contact-item">
+          <span class="contact-label">Email</span>
+          <a href="mailto:lkwterence@gmail.com">lkwterence@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">Phone</span>
+          <a href="tel:+85260503732">+852 6050 3732</a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">LinkedIn</span>
+          <a href="https://www.linkedin.com/in/terence-liu-b3a28023a/">linkedin.com/in/terence-liu-b3a28023a</a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">Portfolio</span>
+          <a href="https://terenceliu.my.canva.site/">terenceliu.my.canva.site</a>
+        </div>
+      </section>
+
+      <section class="block">
+        <h2>Languages</h2>
+        <ul>
+          <li><span class="lang-name">Cantonese</span> · <span class="lang-level">Native</span></li>
+          <li><span class="lang-name">English</span> · <span class="lang-level">Fluent</span></li>
+          <li><span class="lang-name">Mandarin</span> · <span class="lang-level">Fluent</span></li>
+          <li><span class="lang-name">Spanish</span> · <span class="lang-level">Conversational (DELE A2/B1)</span></li>
+          <li><span class="lang-name">Japanese</span> · <span class="lang-level">Elementary (A+ in Japanese I &amp; II)</span></li>
+        </ul>
+      </section>
+
+      <section class="block">
+        <h2>Skills</h2>
+        <div class="skill-group">
+          <strong>Data</strong>
+          <div class="tags">
+            <span class="tag">SQL</span>
+            <span class="tag">Excel</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <strong>Marketing</strong>
+          <div class="tags">
+            <span class="tag">SEO</span>
+            <span class="tag">Google Analytics</span>
+            <span class="tag">Google Search Console</span>
+            <span class="tag">CRM</span>
+            <span class="tag">Digital marketing</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <strong>Programming</strong>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">HTML/CSS</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <strong>Design &amp; Media</strong>
+          <div class="tags">
+            <span class="tag">Figma</span>
+            <span class="tag">Photoshop</span>
+            <span class="tag">Canva</span>
+            <span class="tag">DaVinci Resolve</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <strong>Productivity</strong>
+          <div class="tags">
+            <span class="tag">Word</span>
+            <span class="tag">PowerPoint</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="block">
+        <h2>Interests</h2>
+        <p>Travelling · Swimming · Reading · Skiing &amp; Snowboarding · Language Learning · Dancing</p>
+      </section>
+    </aside>
+
+    <main class="main">
+      <p class="summary">
+        Penultimate-year Information Management student at HKU with hands-on experience in UI/UX design,
+        web development, and data-driven marketing. Seeking internships in marketing, data analysis,
+        software development, and art &amp; luxury.
+      </p>
+
+      <section class="section">
+        <h2>Work Experience</h2>
+
+        <article class="entry">
+          <div class="entry-header">
+            <div class="entry-title">Game Design Intern</div>
+            <div class="entry-date">Jun 2026 – Present</div>
+          </div>
+          <div class="entry-org">MedMind Technology Limited · Hong Kong</div>
+          <ul>
+            <li>Designed game interfaces and user flows using Figma for UI/UX across active gaming projects.</li>
+            <li>Developed, debugged, and tested game features through hands-on coding and maintenance.</li>
+            <li>Researched market trends and executed SEO strategies to improve product visibility.</li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <div class="entry-header">
+            <div class="entry-title">Customer Service Officer</div>
+            <div class="entry-date">Apr 2024 – Jul 2025</div>
+          </div>
+          <div class="entry-org">SATS HK Ltd. · Hong Kong International Airport</div>
+          <ul>
+            <li>Coordinated high-volume airport ground services and passenger operations under fast-paced international transit conditions.</li>
+            <li>Monitored real-time flight operations to ensure schedule compliance and resolve logistical conflicts proactively.</li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <div class="entry-header">
+            <div class="entry-title">International Rental Shop Staff</div>
+            <div class="entry-date">Dec 2024 – Mar 2025</div>
+          </div>
+          <div class="entry-org">Woody Rentals · Hakuba, Japan</div>
+          <ul>
+            <li>Managed global guest reservations and optimized website booking records during peak ski seasons.</li>
+            <li>Delivered multilingual technical consultation and hospitality to international clientele.</li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <div class="entry-header">
+            <div class="entry-title">Job Shadowing</div>
+            <div class="entry-date">Aug 2023</div>
+          </div>
+          <div class="entry-org">Leigh &amp; Orange Ltd · Hong Kong SAR</div>
+          <ul>
+            <li>Shadowed an ongoing architectural project with CUHK.</li>
+            <li>Hands-on experience in data entry and analysis.</li>
+            <li>Attended internal meetings to gain exposure to business communication in the architectural industry.</li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <div class="entry-header">
+            <div class="entry-title">Part-Time Academic Tutor</div>
+            <div class="entry-date">Sep 2022 – Aug 2023</div>
+          </div>
+          <div class="entry-org">Seedling Education</div>
+          <ul>
+            <li>Led homework tutoring workshops for primary and secondary students across multiple districts.</li>
+            <li>Delivered 1-to-1 English and Mathematics instruction to improve academic performance and test results.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="section">
+        <h2>Projects</h2>
+        <article class="entry">
+          <div class="entry-header">
+            <div class="entry-title">HKU — A Day in the Life</div>
+            <div class="entry-date">School Project</div>
+          </div>
+          <div class="entry-org">Interactive choose-your-own-adventure RPG for student mental wellness</div>
+          <ul>
+            <li>Built with HTML, CSS, and UI/UX design principles; <a class="project-link" href="https://amaranth-doll-20.tiiny.site">amaranth-doll-20.tiiny.site</a></li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="section">
+        <h2>Academic Background</h2>
+        <article class="entry">
+          <div class="entry-header">
+            <div class="entry-title">Bachelor of Science in Information Management</div>
+          </div>
+          <div class="entry-org">The University of Hong Kong</div>
+        </article>
+        <article class="entry">
+          <div class="entry-header">
+            <div class="entry-title">Associate Degree in Social Policy and Administration</div>
+          </div>
+          <div class="entry-org">Hong Kong Community College</div>
+          <p class="edu-honour">Dean's List — outstanding academic achievement</p>
+        </article>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
