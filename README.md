@@ -12,11 +12,17 @@ Open http://localhost:8080
 
 ## Deploy
 
-Static files — deploy to any host:
+**Live site:** https://terence0911.github.io/portfolio/
 
-- **GitHub Pages**: push to a repo and enable Pages from the `main` branch
-- **Vercel / Netlify**: connect the repo or drag the folder
-- **Canva**: use this as reference when updating your Canva site, or point your custom domain here instead
+Push to `main` to publish. GitHub Pages deploys automatically on each push.
+
+```bash
+git add .
+git commit -m "Update portfolio"
+git push origin main
+```
+
+After pushing, hard-refresh the live site (`Cmd + Shift + R`) if changes do not appear immediately.
 
 ## CV
 
