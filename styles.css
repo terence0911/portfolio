@@ -347,11 +347,6 @@ a:hover {
   gap: var(--space-md);
 }
 
-.about-cards {
-  display: grid;
-  gap: var(--space-md);
-}
-
 .about-card {
   display: flex;
   flex-direction: column;
@@ -359,6 +354,14 @@ a:hover {
   background: var(--white);
   border: 1px solid rgba(77, 71, 46, 0.08);
   border-radius: var(--radius-md);
+}
+
+.about-card--trait > p {
+  flex: 1;
+}
+
+.about-card--trait .about-card-photos img {
+  aspect-ratio: 3 / 2;
 }
 
 .about-card h3 {
@@ -374,9 +377,6 @@ a:hover {
   color: rgba(77, 71, 46, 0.85);
 }
 
-.about-cards .about-card > p {
-  flex: 1;
-}
 
 .about-card-copy {
   flex: 1;
@@ -692,12 +692,22 @@ a:hover {
 @media (min-width: 48rem) {
   .about-grid {
     grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "intro cultural"
+      "intro creative";
     align-items: stretch;
   }
 
-  .about-cards {
-    grid-template-rows: 1fr 1fr;
-    min-height: 100%;
+  .about-card--intro {
+    grid-area: intro;
+  }
+
+  .about-card--cultural {
+    grid-area: cultural;
+  }
+
+  .about-card--creative {
+    grid-area: creative;
   }
 
   .timeline-item {
