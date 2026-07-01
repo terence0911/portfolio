@@ -1,20 +1,48 @@
 (function () {
+  const toggle = document.querySelector(".nav-toggle");
+  const menu = document.querySelector(".nav-menu");
   const yearEl = document.getElementById("year");
-  const clockEl = document.getElementById("clock");
 
   if (yearEl) {
     yearEl.textContent = String(new Date().getFullYear());
   }
 
-  function updateClock() {
-    if (!clockEl) return;
-    const now = new Date();
-    const h = String(now.getHours()).padStart(2, "0");
-    const m = String(now.getMinutes()).padStart(2, "0");
-    const s = String(now.getSeconds()).padStart(2, "0");
-    clockEl.textContent = `${h}:${m}:${s}`;
+  if (toggle && menu) {
+    toggle.addEventListener("click", () => {
+      const isOpen = toggle.getAttribute("aria-expanded") === "true";
+      toggle.setAttribute("aria-expanded", String(!isOpen));
+      toggle.setAttribute("aria-label", isOpen ? "Open menu" : "Close menu");
+      menu.classList.toggle("is-open", !isOpen);
+    });
+
+    menu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.setAttribute("aria-label", "Open menu");
+        menu.classList.remove("is-open");
+      });
+    });
   }
 
-  updateClock();
-  setInterval(updateClock, 1000);
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll('.nav-menu a[href^="#"]');
+
+  if (sections.length && navLinks.length && "IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const id = entry.target.getAttribute("id");
+          navLinks.forEach((link) => {
+            const active = link.getAttribute("href") === `#${id}`;
+            link.style.opacity = active ? "1" : "";
+            link.style.fontWeight = active ? "600" : "";
+          });
+        });
+      },
+      { rootMargin: "-40% 0px -50% 0px", threshold: 0 }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+  }
 })();

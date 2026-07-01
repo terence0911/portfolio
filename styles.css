@@ -353,10 +353,6 @@ a:hover {
   flex: 1;
 }
 
-.about-card--trait .about-card-photos img {
-  aspect-ratio: 3 / 2;
-}
-
 .about-card h3 {
   margin: 0 0 var(--space-xs);
   font-family: var(--font-display);
@@ -390,6 +386,7 @@ a:hover {
   aspect-ratio: 4 / 3;
   border-radius: var(--radius-sm);
   overflow: hidden;
+  background: var(--grey-light);
 }
 
 .about-portrait img {
@@ -405,14 +402,22 @@ a:hover {
   gap: var(--space-sm);
   margin-top: auto;
   padding-top: var(--space-md);
+  overflow: hidden;
 }
 
 .about-card-photos img {
   width: 100%;
   aspect-ratio: 4 / 3;
+  height: auto;
+  max-height: 12rem;
   object-fit: cover;
   object-position: center;
   border-radius: var(--radius-sm);
+}
+
+.about-card--trait .about-card-photos img {
+  aspect-ratio: 3 / 2;
+  max-height: 10rem;
 }
 
 /* Skills */
