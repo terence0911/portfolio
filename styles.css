@@ -7,6 +7,8 @@
   --gold: #efcd3d;
   --amber: #e09f3e;
   --white: #ffffff;
+  --grey-light: #eceae6;
+  --grey-soft: #e4e2dc;
 
   --font-display: "Cormorant Garamond", Georgia, serif;
   --font-body: "DM Sans", system-ui, sans-serif;
@@ -505,16 +507,16 @@ a:hover {
 
 /* Projects */
 .section-projects {
-  background: var(--brown);
-  color: var(--cream);
+  background: var(--grey-light);
+  color: var(--brown-dark);
 }
 
 .section-projects .section-label {
-  color: var(--gold);
+  color: var(--brown);
 }
 
 .section-projects .section-header h2 {
-  color: var(--cream);
+  color: var(--brown-dark);
 }
 
 .project-grid {
@@ -527,8 +529,8 @@ a:hover {
   display: flex;
   flex-direction: column;
   padding: var(--space-lg);
-  background: rgba(248, 245, 239, 0.06);
-  border: 1px solid rgba(248, 245, 239, 0.12);
+  background: var(--white);
+  border: 1px solid rgba(77, 71, 46, 0.08);
   border-radius: var(--radius-lg);
   overflow: hidden;
 }
@@ -541,7 +543,7 @@ a:hover {
   margin: calc(var(--space-lg) * -1) calc(var(--space-lg) * -1) var(--space-md);
   aspect-ratio: 16 / 9;
   overflow: hidden;
-  background: rgba(0, 0, 0, 0.12);
+  background: var(--grey-soft);
 }
 
 .project-media img {
@@ -563,7 +565,7 @@ a:hover {
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--brown);
 }
 
 .project-card h3 {
@@ -572,13 +574,14 @@ a:hover {
   font-size: 1.75rem;
   font-weight: 600;
   line-height: 1.2;
+  color: var(--brown-dark);
 }
 
 .project-card p {
   margin: 0 0 var(--space-md);
   flex: 1;
   font-size: 0.975rem;
-  opacity: 0.88;
+  color: rgba(77, 71, 46, 0.85);
 }
 
 .project-link {
@@ -588,24 +591,25 @@ a:hover {
   margin-top: auto;
   font-size: 0.9375rem;
   font-weight: 600;
-  color: var(--gold);
+  color: var(--brown);
   text-decoration: none;
 }
 
 .project-link:hover {
-  color: var(--cream);
+  color: var(--amber);
 }
 
 /* Contact */
 .section-contact {
-  background: var(--amber);
+  background: var(--grey-soft);
 }
 
 .contact-panel {
   display: grid;
   gap: var(--space-xl);
   padding: var(--space-xl);
-  background: var(--cream);
+  background: var(--white);
+  border: 1px solid rgba(77, 71, 46, 0.08);
   border-radius: var(--radius-lg);
 }
 
